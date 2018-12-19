@@ -4,74 +4,7 @@
     <bookmark url="file://$PROJECT_DIR$/controllers/ProductsController.php" line="3" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4cc97422-36b2-496d-b4ff-3094e77674a4" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../Librerias/.idea/php.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Librerias/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Librerias/debug/index.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Librerias/generar-pdf/index.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Librerias/images/index.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../MVC/controllers/UsersController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../MVC/index.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../MVC/models/user.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../MVC/views/Users/index.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../blog/.idea/sqldialects.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../blog/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../blog/assets/css/style.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../blog/categories.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../blog/category.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../blog/createpost.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../blog/delete.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../blog/edit.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../blog/edituser.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../blog/includes/cabecera.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../blog/includes/conexion.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../blog/includes/helpers.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../blog/includes/lateral.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../blog/includes/pie.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../blog/includes/redireccion.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../blog/login.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../blog/logout.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../blog/misdatos.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../blog/post.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../blog/posts.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../blog/register.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../blog/savecategory.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../blog/savepost.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../blog/search.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../master-poo/clases/config.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../master-poo/clases/index.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.htaccess" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dictionaries/matias.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/autoload.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/config/db.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/config/parameters.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/controllers/CarritoController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/controllers/CategoryController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/controllers/ErrorsController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/controllers/OrdersController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/controllers/ProductsController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/controllers/UsersController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/index_maqueta.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/models/categories/category.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/models/products/product.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/models/users/User.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/views/carrito/index.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/views/categories/create.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/views/categories/index.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/views/categories/view.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/views/layout/footer.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/views/layout/header.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/views/layout/sidebar.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/views/products/create.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/views/products/destacados.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/views/products/gestion.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/views/products/view.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/views/users/index.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/views/users/register.php" afterDir="false" />
-    </list>
+    <list default="true" id="4cc97422-36b2-496d-b4ff-3094e77674a4" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -128,7 +61,7 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/views/products/view.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="187">
@@ -155,11 +88,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/helpers/utils.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="369">
-              <caret line="113" column="18" selection-start-line="113" selection-start-column="18" selection-end-line="113" selection-end-column="18" />
+            <state relative-caret-position="716">
+              <caret line="94" column="9" lean-forward="true" selection-start-line="94" selection-start-column="9" selection-end-line="94" selection-end-column="9" />
             </state>
           </provider>
         </entry>
@@ -222,7 +155,7 @@
     </dirStrings>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -359,15 +292,16 @@
       <workItem from="1544999642488" duration="343000" />
       <workItem from="1545000006884" duration="2090000" />
       <workItem from="1545092425598" duration="1167000" />
-      <workItem from="1545174619349" duration="10370000" />
+      <workItem from="1545174619349" duration="10658000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="96663000" />
+    <option name="totallyTimeSpent" value="96951000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1600" y="0" width="1920" height="1080" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" weight="0.2614728" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -383,7 +317,7 @@
       <window_info anchor="bottom" id="Docker" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="9" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="10" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="11" visible="true" weight="0.32878152" />
+      <window_info anchor="bottom" id="Terminal" order="11" weight="0.32878152" />
       <window_info anchor="bottom" id="Event Log" order="12" side_tool="true" />
       <window_info anchor="bottom" id="Inspection Results" order="13" weight="0.3294423" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -580,13 +514,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/views/products/view.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" column="30" lean-forward="true" selection-start-line="11" selection-start-column="30" selection-end-line="11" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/views/products/destacados.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="102">
@@ -631,8 +558,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/helpers/utils.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="369">
-          <caret line="113" column="18" selection-start-line="113" selection-start-column="18" selection-end-line="113" selection-end-column="18" />
+        <state relative-caret-position="716">
+          <caret line="94" column="9" lean-forward="true" selection-start-line="94" selection-start-column="9" selection-end-line="94" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/products/view.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" column="30" lean-forward="true" selection-start-line="11" selection-start-column="30" selection-end-line="11" selection-end-column="30" />
         </state>
       </provider>
     </entry>
