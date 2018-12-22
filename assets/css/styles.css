@@ -408,6 +408,7 @@ button{
     display: block;
     float: right;
     width: 100px;
+    text-align: center;
 }
 
 .updown-unidades{

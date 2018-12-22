@@ -116,4 +116,20 @@ class Utils{
         echo '<script>document.getElementsByTagName("code")[0].getElementsByTagName("span")[1].remove() ;document.getElementsByTagName("code")[0].getElementsByTagName("span")[document.getElementsByTagName("code")[0].getElementsByTagName("span").length - 1].remove() ; </script>';
         die();
     }
+
+    public static function statsCarrito(){
+        $stats = array(
+            'count' => 0,
+            'total' => 0
+        );
+        if (isset($_SESSION['carrito'])){
+          $stats['count'] = count($_SESSION['carrito']);
+
+          foreach ($_SESSION['carrito'] as $product){
+
+              $stats['total'] += $product['product']->price * $product['quantity'];
+          }
+        }
+        return $stats;
+    }
 }
