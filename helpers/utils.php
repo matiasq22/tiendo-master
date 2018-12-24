@@ -132,4 +132,13 @@ class Utils{
         }
         return $stats;
     }
+
+
+    public static function isLogin(){
+        if(!isset($_SESSION['login'])){
+            header("Location:".base_url);
+        }else{
+            return true;
+        }
+    }
 }

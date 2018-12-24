@@ -195,9 +195,18 @@ class Order
         return $orders;
     }
 
-    public function getOneByUser(){
-        $orders = $this->db->query("select * from order_headers o join order_details d on d.header_id = o.id where o.id = {$this->getId()}");
+    public function getAllByUser(){
+        $sql = "select o.*, u.name,o.address from order_headers o " .
+            "join users u on o.user_id = u.id where o.user_id = {$this->getUserId()} order by o.id desc";
+        $orders = $this->db->query($sql);
         return $orders;
+    }
+
+    public function getOneByUser(){
+        $sql = "select o.id, o.price, o.created_at as 'fecha', u.name,o.address from order_headers o join order_details d on d.header_id = o.id " .
+            "join users u on o.user_id = u.id where o.user_id = {$this->getUserId()} order by o.id desc limit 1";
+        $orders = $this->db->query($sql);
+        return $orders->fetch_object();
     }
 
     public function getOne()
@@ -206,16 +215,16 @@ class Order
         return $order->fetch_object();
     }
 
-    public function getLast(){
+    public function getProductsByOrder($id){
         try {
-            $id = "select id as 'header_id' from order_headers order by id desc limit 1";
-            $query = $this->db->query($id);
-            $header_id = $query->fetch_object()->header_id;
+            $sql= "select p.*, d.unidades from products p join order_details d on d.product_id = p.id " .
+              " where d.header_id = $id";
+            $products = $this->db->query($sql);
 
         } catch (Exception $e) {
             Utils::dd("Excepcion capturarda:", $e->getMessage());
         }
-        return $header_id;
+        return $products;
     }
 
 }

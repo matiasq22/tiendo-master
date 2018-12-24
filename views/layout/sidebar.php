@@ -44,9 +44,9 @@
             <a href="<?= base_url ?>Users/register">Registrarse</a>
         </li>
 
-    <?php else:?>
+    <?php else :?>
         <li>
-            <a href="#">Mis Pedidos</a>
+            <a href="<?=base_url?>Orders/myOrders">Mis Pedidos</a>
         </li>
     <br/>
         <a href="<?=base_url?>Users/logout" class="button button-small button-red">Cerrar Sesion</a>

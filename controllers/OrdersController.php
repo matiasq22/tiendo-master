@@ -13,6 +13,17 @@ class OrdersController
         }
     }
 
+    public function myOrders(){
+        Utils::isLogin();
+        $user_id = $_SESSION['login']->id;
+
+        $order = new Order();
+        $order->setUserId($user_id);
+        $orders = $order->getAllByUser();
+
+        require_once 'views/orders/myorders.php';
+    }
+
     public function make()
     {
         require_once 'views/orders/make.php';
@@ -51,13 +62,12 @@ class OrdersController
 
     public function success(){
 
-        $order = new Order();
-        $id = $order->getLast();
-        $order->setId($id);
-        $ord = $order->getJoinOne();
+        $user_id = $_SESSION['login']->id;
+        $orders = new Order();
+        $orders->setUserId($user_id);
+        $order = $orders->getOneByUser();
+        $products = $orders->getProductsByOrder($order->id);
 
-        Utils::dd($ord);
-        die();
         require_once 'views/orders/success.php';
     }
 }
