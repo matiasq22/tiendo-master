@@ -29,7 +29,7 @@
         <ul>
             <?php if (isset($_SESSION['admin'])): ?>
                 <li>
-                    <a href="#">Gestionar Pedidos</a>
+                    <a href="<?=base_url?>Orders/gestion">Gestionar Pedidos</a>
                 </li>
                 <li>
                     <a href="<?=base_url?>Products/gestion">Gestionar Productos</a>

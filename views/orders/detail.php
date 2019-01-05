@@ -1,12 +1,29 @@
-<?php if (isset($_SESSION['order']) && $_SESSION['order'] == 'complete') : ?>
-    <div class="alert_green"><h1>Pedido Confirmado Correctamente!</h1></div>
-    <p>
-        Tu pedido ha sido registrado con exito, una vez realizado el pago, sera procesado y enviado.
-    </p>
-    <br/>
+<h1>Detalle del Pedido</h1>
+   <br/>
+<?php if (isset($_SESSION['changeStatus']) && $_SESSION['changeStatus'] == "complete"): ?>
+<div class="alert_green"><h3>Status Actualizado Correctamente!</h3></div>
+<?php elseif (isset($_SESSION['changeStatus']) && $_SESSION['changeStatus'] == "failed") : ?>
+<div class="alert_red"><h3>Ocurrio un Error al actualizar!</h3></div>
+<?php endif;?>
+<?php Utils::deleteSession('changeStatus')?>
+<?php if(Utils::isAdmin()): ?>
+<h3>Cambiar Estado del Pedido</h3>
+<form action="<?=base_url?>Orders/status" method="post">
+    <select name="status">
+        <option value="confirm">Pendiente</option>
+        <option value="preparation">En Preparacion</option>
+        <option value="ready">Preparado</option>
+        <option value="sended">Enviado</option>
+    </select>
+    <input type="hidden" value="<?=$order->id?>" name="id"/>
+    <input type="submit" value="Cambiar estado"/>
+</form>
+<br/>
+<?php endif;?>
     <h3>Datos del Pedido: </h3>
     <?php if (isset($order) ? $order: false) : ?>
             Numero de Pedido:     <?= $order->id ?> <br>
+            Estado:  <?=Utils::showStatus($order->status)?><br>
             Usuario:     <?=$order->name?><br>
             Direccion:   <?= $order->address ?><br>
             Total a pagar:  <?= $order->price ?> $<br>
@@ -33,9 +50,7 @@
             </tr>
             <?php endwhile;?>
     </table>
+
     <?php endif;?>
-<?php elseif (isset($_SESSION['order']) && $_SESSION['order'] == 'failed'): ?>
-    <div class="alert_red"><h1>No se pudo registrar el Pedido</h1></div>
-<?php endif; ?>
 <br/>
 <a href="<?=base_url?>" class="button button-pedido">Aceptar</a>

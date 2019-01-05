@@ -24,6 +24,30 @@ class OrdersController
         require_once 'views/orders/myorders.php';
     }
 
+    public function view(){
+        Utils::isLogin();
+        if(isset($_GET['id'])){
+            $id = $_GET['id'];
+
+            $orders = new Order();
+            $orders->setId($id);
+            $order = $orders->getOne();
+            $products = $orders->getProductsByOrder($order->id);
+
+         require_once 'views/orders/detail.php';
+        }else{
+            header("Location:".base_url.'Orders/myOrders');
+        }
+    }
+
+    public function gestion(){
+        Utils::isAdmin();
+        $gestion = true;
+        $order = new Order();
+        $orders = $order->getAll();
+        require_once 'views/orders/myorders.php';
+    }
+
     public function make()
     {
         require_once 'views/orders/make.php';
@@ -70,4 +94,24 @@ class OrdersController
 
         require_once 'views/orders/success.php';
     }
+
+    public function status(){
+        Utils::isAdmin();
+
+        if(isset($_POST)){
+            $status = $_POST['status'];
+            $id = $_POST['id'];
+
+            $order = new Order();
+            $order->setId($id);
+            $order->setStatus($status);
+            if($order->UpdateStatus()){
+                $_SESSION['changeStatus'] = "complete";
+            }else{
+                $_SESSION['changeStatus'] = "failed";
+            }
+        }
+        header("Location:".base_url."Orders/view&id=".$_POST['id']);
+    }
+
 }

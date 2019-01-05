@@ -191,18 +191,20 @@ class Order
 
     public function getAll()
     {
-        $orders = $this->db->query("select * from order_headers order by id desc");
+        $orders = $this->db->query("select o.id,o.created_at, o.status, o.price,u.name from order_headers o join users u on o.user_id = u.id order by id desc");
         return $orders;
     }
 
-    public function getAllByUser(){
+    public function getAllByUser()
+    {
         $sql = "select o.*, u.name,o.address from order_headers o " .
             "join users u on o.user_id = u.id where o.user_id = {$this->getUserId()} order by o.id desc";
         $orders = $this->db->query($sql);
         return $orders;
     }
 
-    public function getOneByUser(){
+    public function getOneByUser()
+    {
         $sql = "select o.id, o.price, o.created_at as 'fecha', u.name,o.address from order_headers o join order_details d on d.header_id = o.id " .
             "join users u on o.user_id = u.id where o.user_id = {$this->getUserId()} order by o.id desc limit 1";
         $orders = $this->db->query($sql);
@@ -211,20 +213,38 @@ class Order
 
     public function getOne()
     {
-        $order = $this->db->query("select * from order_headers where id = {$this->getId()} ");
+        $order = $this->db->query("select o.id,o.address,o.price,o.status, u.name from order_headers o join users u on u.id = o.user_id where o.id = {$this->getId()} ");
         return $order->fetch_object();
     }
 
-    public function getProductsByOrder($id){
+    public function getProductsByOrder($id)
+    {
         try {
-            $sql= "select p.*, d.unidades from products p join order_details d on d.product_id = p.id " .
-              " where d.header_id = $id";
+            $sql = "select p.*, d.unidades from products p join order_details d on d.product_id = p.id " .
+                " where d.header_id = $id";
             $products = $this->db->query($sql);
 
         } catch (Exception $e) {
             Utils::dd("Excepcion capturarda:", $e->getMessage());
         }
         return $products;
+    }
+
+    public function UpdateStatus()
+    {
+        try {
+            $sql = "update order_headers set status = '{$this->getStatus()}' where id = {$this->getId()}";
+            $update = $this->db->query($sql);
+
+            if ($update) {
+                return true;
+            } else {
+                return false;
+            }
+        } catch (Exception $exception) {
+            Utils::dd("Excepcion capturarda:", $exception->getMessage());
+            return false;
+        }
     }
 
 }

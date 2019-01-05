@@ -15,4 +15,5 @@
 <?php else: ?>
 <h1>Por Favor Inicia Sesion</h1>
 <p>Debes estar logueado para realizar pedidos</p>
+<?php Utils::deleteSession('carrito');?>
 <?php endif;?>
