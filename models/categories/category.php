@@ -56,8 +56,8 @@ class Category{
     }
 
     public function getAll(){
+        // var_dump($db);die();
         $categories = $this->db->query("Select * from categories order by id desc");
-
         return $categories;
     }
 
